@@ -1,6 +1,6 @@
 import SearchInput from './SearchInput';
 
-export default function NavbarComponent() {
+export default function NavbarComponent({onSearch}) {
     return (
         <header className="h-12 border-b border-gray-900 flex items-center justify-between px-6">
             <div className="flex items-center gap-3">
@@ -14,7 +14,7 @@ export default function NavbarComponent() {
                 <span className="text-white font-bold text-sm cursor-pointer">Dashboard</span>
             </div>
 
-            <SearchInput/>
+            <SearchInput onSearch={onSearch}/>
         </header>
     );
 }
